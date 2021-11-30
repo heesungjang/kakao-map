@@ -42,6 +42,7 @@ const Map = () => {
             }));
         }
     }, []);
+
     return (
         <>
             <KakaoMap
@@ -49,15 +50,15 @@ const Map = () => {
                 style={{
                     // 지도의 크기
                     width: "100%",
-                    height: "350px",
+                    height: "300px",
                 }}
                 level={3} // 지도의 확대 레벨
             >
                 {!state.isLoading && (
                     <MapMarker position={state.center}>
-                        <div style={{ padding: "5px", color: "#000" }}>
-                            {state.errMsg ? state.errMsg : "여기가 젤리뷰 "}
-                        </div>
+                        {/* <div style={{ padding: "5px", color: "#000" }}> */}
+                        {/* {state.errMsg ? state.errMsg : "여기가 젤리뷰 "} */}
+                        {/* </div> */}
                     </MapMarker>
                 )}
             </KakaoMap>
